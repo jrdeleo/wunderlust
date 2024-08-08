@@ -1,0 +1,164 @@
+body {
+    font-family: 'Arial Black';
+  }
+
+/*--menu toggle--*/  
+#menu-toggle {
+  position: relative;
+  padding-top: 50px; 
+  text-align: center; 
+}
+#menu-toggle label {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 100px;
+  margin: auto;
+}
+#menu-toggle input {
+  display: none;
+}
+#menu-toggle ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  display: none; 
+}
+#menu-toggle ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+#menu-toggle ul li:last-child {
+  border-bottom: none;
+}
+#menu-toggle ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+#menu-toggle input:checked + label + ul {
+  display: block;
+}
+/*--menu toggle--*/
+/*--contact--*/
+form{
+	display: block;
+	width: 300px;
+	padding: 1em;
+	margin: 0 auto;
+	color: #222;
+	font-size: 1.1em;
+}
+
+input, label, fieldset{
+	display: block;
+	width: 95%;
+}
+
+.required{
+  display: inline-block;
+  color: #DE0B63;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+label{
+	padding-left: 0.5em;
+	margin: 0.75em 0 0.25em 0;
+}
+input{
+	font-size: 1em;
+	padding: 0.25em 0.5em;
+  border: 1px solid black;
+  border-radius: 3px;
+	height: 1.5em;
+}
+fieldset{
+  border: 1px solid black;
+  border-radius: 3px;
+	padding: 0.5em 0 1em 0.5em;
+	margin: 0.75em 0 0.25em 0;
+	width: 98%;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr 3fr;
+}
+input[type=submit]{
+	padding: 0.75em;
+	width: 35%;
+	height: auto;
+	margin-left: 67%;
+	color: #fff;
+	background-color: #222;
+	border: none;
+	font-family: serif;
+}
+input:focus, textarea:focus{
+	border-color: blue;
+	box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.3);
+	border-radius: 4px;
+}
+input:error, textarea:error{
+	border-color: #DE0B63;
+}
+/*--contact--*/
+  /*--screen adjustments--*/ 
+@media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+  
+    .logo {
+      width: 60px;
+      margin-right: 10px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 20px;
+      display: none;
+    }
+  
+    #toggle:checked + label + ul {
+      display: flex;
+    }
+  
+    #toggle + label {
+      display: block;
+    }
+  
+    nav ul li {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 5px;
+    }
+  
+    .logo {
+      width: 50px;
+    }
+  
+    h1 {
+      font-size: 18px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    nav ul li a {
+      font-size: 16px;
+      padding: 8px;
+    }
+  }
