@@ -10,21 +10,23 @@ body {
   padding: 20px;
   color: #333;
 }
+/*--header--*/
 header {
   text-align: center;
-  background: #333;
+  background: #a1d7c8;
   color: #fff;
   padding: 1rem 0;
 }
-
 header h1 {
   margin: 0.5rem 0;
   font-family: 'Molle', cursive;
+  color:rgb(210, 173, 38);
 }
-
 header p {
   margin: 0.5rem 0;
 }
+/*--header--*/
+/*--screen reader--*/
 #skip {
 position:absolute;
 left:-10000px;
@@ -33,60 +35,70 @@ width:1px;
 height:1px;
 overflow:hidden;
 }
+.sr-only{
+  position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+/*--screen reader--*/
 #logo img {
   max-width: 100%;
   height: auto;
 }
-
 nav {
   margin-top: 1rem;
 }
-
+/*--menu toggle--*/
 #menu-toggle {
   display: flex;
   justify-content: center;
 }
-
 #menu-toggle input[type="checkbox"] {
   display: none;
 }
-
 #menu-toggle label {
   display: block;
-  background: #444;
-  color: #fff;
+  background: #20c2db;
+  color: #fef7df;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
 }
-
 #menu-toggle ul {
   list-style: none;
   display: none;
   padding: 0;
 }
-
 #menu-toggle ul li {
   margin: 0.5rem 0;
 }
-
 #menu-toggle ul li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 0.5rem 1rem;
   display: block;
-  background: #555;
+  background: #20c2db;
+  color: #fef7df;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+
   border-radius: 5px;
 }
-
+#menu-toggle ul li a:hover{
+  background:rgb(224, 203, 46);
+  color:rgb(0, 115, 255);
+}
+#menu-toggle label:hover{
+  background:rgb(224, 203, 46);
+  color:rgb(0, 115, 255);
+}
 #menu-toggle input:checked + label + ul {
   display: block;
 }
-
+/*--menu toggle--*/
 main {
   margin-top: 1rem;
 }
-
 #intro {
   text-align: center;
   padding: 1rem;
