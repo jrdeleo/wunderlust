@@ -98,34 +98,34 @@ main {
 .image-container {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Space between the rows */
+  gap: 10px;
 }
 
 .top-images {
   display: flex;
-  gap: 10px; /* Space between the images in the top row */
+  gap: 10px; 
 }
 
 .top-images img {
-  width: 50%; /* Each image takes up half the container's width */
+  width: 50%; 
   height: auto;
-  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  border-radius: 10px; 
 }
 
 .bottom-image {
-  width: 100%; /* The bottom image takes the full width */
+  width: 100%; 
   height: auto;
-  border-radius: 10px; /* Optional: Adds rounded corners to the image */
+  border-radius: 10px; 
 }
 
 /*-- images --*/
-
+/*--
 section {
   margin-top: 1rem;
   padding: 1rem;
   background: #fff;
   border-radius: 5px;
-}
+} --*/
 
 #plan div,
 #testimonials div,
@@ -147,12 +147,27 @@ section > div > section img {
 }
 
 /*--plan your trip--*/
+#plan h3 {
+  padding-left:22px;
+  padding-top:10px;
+  font-family: 'Molle', cursive;;
+}
 #plan {
   background:#F6D64A;
 }
 #plan section{
   background:#55BCD5;
-  border:white;
+  border-radius:5px;
+  border-style: solid;
+  border-color:white;
+}
+/*--plan your trip --*/
+/*-- about your destination --*/
+#about {
+  background:#499BD2;
+}
+#about section {
+  background:#499BD2;
 }
 /*--form--*/
 form{
@@ -190,13 +205,15 @@ fieldset{
 }
 input[type=submit]{
 	padding: 0.75em;
-	width: 35%;
+	width: 55%;
 	height: auto;
 	margin-left: 67%;
+  margin-top:10px;
 	color: #fff;
-	background-color: #222;
+	background-color:#9B26B0;
 	border: none;
-	font-family: serif;
+	font-family:'Montserrat', sans-serif;
+
 }
 
 input:focus, textarea:focus{
@@ -208,7 +225,7 @@ input:error, textarea:error{
 	border-color: #DE0B63;
 }
 
-.custom-select {
+#selects {
   appearance: none;
   background-color: transparent;
   border: none;
@@ -219,8 +236,13 @@ input:error, textarea:error{
   font-size: inherit;
   cursor: inherit;
   line-height: inherit;
+  outline:none;
+  
 }
-
+.custom-select {
+  
+  border: 2px solid #9B26B0;
+}
 /*--form--*/
 footer {
   text-align: center;
@@ -276,60 +298,78 @@ footer a {
       flex: 1 1 22%;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 400px) {
+
+  #logo {
+    display: flex;
+    justify-content: space-between;
+ 
+  }
+  
+  #logo img {
+    display: flex;
+    margin-top:20px;
+    max-width:50%;
+  
+  }
   #menu-toggle {
       display: block;
   }
-  #toggle {
-    max-width:100%
-  }
-  #menu-toggle {
-    display:flex;
-    justify-content: center;
-  }
+/*-- menu toggle --*/
+
+#menu-toggle {
+  
+  align-items: center;
+}
   #menu-toggle input[type="checkbox"] {
     display: none;
   }
   #menu-toggle label {
     display: inline-block;
-    width: auto;
     text-align: center;
-    background: #20c2db;
-    color: #fef7df;
-    padding: 0.5rem 1rem;
+    background:#F6D64A;
+    color:#222222;
     cursor: pointer;
-    border-radius: 5px;
   }
   #menu-toggle ul {
     list-style: none;
     display: none;
     padding: 0;
-  }
-  #menu-toggle ul li {
-    margin: 0.5rem 0;
+    
   }
   #menu-toggle ul li a {
     display: block;
-    background: #20c2db;
-    color: #fef7df;
+    background:#499BD2;
+    color:#222222;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
-  }
-  #menu-toggle ul li a:hover{
-    background:rgb(224, 203, 46);
-    color:rgb(0, 115, 255);
-  }
-  #menu-toggle label:hover{
-    background:rgb(224, 203, 46);
-    color:rgb(0, 115, 255);
+    text-align:center;
   }
   #menu-toggle input:checked + label + ul {
     display: block;
   }
-}
+  /*-- menu toggle --*/
+  /*-- img --*/
+  section > div > section img {
+    max-width: 200px;
+    margin-bottom: 0.5rem;
+  }
+/*-- about your destination --*/
+#about {
+  background:#499BD2;
+  display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 10px; 
 
- 
+    margin: 0 auto;
+}  
+#about section img {
+  width:20%;
+}
+#form 
+
+}
 @media (min-width: 1000px){
   header {
     position: relative;
@@ -338,9 +378,7 @@ footer a {
     display: flex;
     align-items: center;
 }
-#logo {
-    flex: 0 0 auto;
-}
+#logo { flex: 0 0 auto; }
 #logo img {
     max-width: 100%;
     height: auto;
@@ -377,6 +415,38 @@ nav {
     text-decoration: none;
     color:#222222;
 }
+/*-- contact --*/
+#contact form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width:100%;
+}
+#contact h3 {
+  grid-column: span 3; 
+  text-align: center;
+}
+
+#names,
+#nums,
+#selects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+
+#names input,
+#nums input,
+#nums select,
+#selects select,
+.custom-select,
+#mySubmit {
+    width: 100%;
+}
+/*--contact--*/
 }
 /*--
 #toggle {
